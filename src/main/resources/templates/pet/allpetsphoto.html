@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>All pets photos</title>
+    <nav th:insert="home.html::menu_nav"></nav>
+    <link th:href="@{static/main.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Pets</h1>
+    <hr>
+    <table>
+        <thead>
+        <tr>
+            <td><img th:src="@{/images/Bunny.png}" class="circle " max-width="200" height="150" border="1" align="left">
+                <p align="center" ><b><i>Bunny</i></b></p></td>
+            <td><img th:src="@{ /images/Rex.png}" class="circle " max-width="200" height="150" border="1" align="right">
+                <p align="center"><b><i>Rex</i></b></p></td>
+            <br/>
+        </tr>
+        <tr>
+            <td> <img th:src="@{/images/Cinnamon.png}" class="circle " max-width="200" height="150" border="1" align="left">
+                <p align="center"><b><i>Cinnamon</i></b></p></td>
+            <td> <img th:src="@{/images/Foxy.png}" class="circle" max-width="200" height="150" border="1" align="right">
+                <p align="center"></p><b><i></i>Foxy</b></i></p></td>
+            <br/>
+        </tr>
+        <tr>
+            <td>
+                <img th:src="@{/images/Maia.png}" class="circle" max-width="200" height="150" border="1" align="left">
+                <p align="center"><b><i></i>Maia</b></i></p></td>
+            <td><img th:src="@{/images/Oli.jpg}" class="circle" max-width="200" height="150" border="1" align="right">
+                <p align="center"><b><i>Oly</i></b></p></td>
+        </tr>
+        </thead>
+    </table>
+    <a class="btn-floating btn-large pulse right black" th:href="@{/addpet}"><i class="material-icons " .left-aligment>add</i>
+        </a>
+
+</div>
+</body>
+</html>

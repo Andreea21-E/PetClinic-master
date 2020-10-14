@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="icofont.css">
+    <nav th:fragment="menu_nav" xmlns:th="http://www.thymeleaf.org">
+        <div class="nav-wrapper #4dd0e1 cyan lighten-2">
+
+            <a class="btn-floating btn-large pulse right black" th:href="@{/}"><i class="material-icons ">pets</i> </a>
+
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger #4dd0e1 cyan lighten-2"><i
+                    class="material-icons">menu</i></a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down #4dd0e1 cyan lighten-2">
+                <img th:src="@{/images/pets.png}" style="float:left;width:60px;height:60px;" >
+                <link th:href="@{/css/index.css}" rel="stylesheet" type="text/css">
+                <li><a th:href="@{/allvets} ">Vets<i class="medium material-icons right">assignment_ind</i></a></li>
+                <li><a th:href="@{/allpets}">Pets<i class="medium material-icons right">pets</i></a></li>
+                <li><a th:href="@{/allowners}">Owners<i class="medium material-icons right">face</i></a></li>
+                <li><a th:href="@{/allvisits}">Visits<i class="medium material-icons right">rate_reviews</i></a></li>
+                <li><a th:href="@{/allpetsphoto}">Gallery<i class="medium material-icons right">burst_mode</i></a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <script th:fragment="nav_script" xmlns:th="http://www.thymeleaf.org">
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+
+        }
+
+        .row {
+            display: flex;
+
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .column {
+            flex: 50%;
+            padding: 1% 5% 0% 5%
+        }
+        .center{
+            text-align: center;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+
+        }
+
+
+    </style>
+
+</head>
+<body>
+<div class="row">
+    <div class="column">
+        <h5 class="center" style="padding-left: 3%">Our biggest asset is our staff who have the experience, knowledge and skills to ensure that your pet receives the highest quality of care. Our dedication to clinical excellence is backed by our commitment to Continuing Professional Development (CPD) for all staff, ensuring that the most up-to-date treatments are available at the time when your pet needs it most.</h5>
+    </div>
+    <div class="column">
+        <img src="images/pet_clinic.jpg" alt="image"style="height:100%;width: 90%; padding-right: 1%">
+    </div>
+
+</div>
+<div class="row">
+    <div class="column">
+        <img src="images/pet_clinic2.jpg" alt="image" style="height:100%;width: 90%;padding-left: 10% ">
+    </div>
+    <div class="column">
+        <h5 class="center" style="padding-right: 3%; padding-top: 3%; text-align: center" >Our dedicated receptionists are on hand to make your appointments and deal with any general queries you may have. They are all pet lovers too and are committed to the care and welfare of your pets.
+
+            Hospitalisation facilities are provided for the very sick and for those recovering from operations overnight. Our veterinary in-patient facilities are maintained to the highest standards of hygiene and comfort and include separate cat and dog wards, together with isolation and intensive care wards.</h5>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
